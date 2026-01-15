@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Ayman | Python Developer & Hardware Enthusiast</title>
+    <meta name="description"
+        content="Portfolio of Adam Ayman, a young aspiring Python Software Engineer and Hardware Innovator specializing in logic, automation, and embedded systems.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">Adam<span class="accent">.</span></a>
+
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link btn btn-primary">Contact Me</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </nav>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <span class="hero-subtitle fade-in">Hello, I'm Dido</span>
+                <h1 class="hero-title fade-in">Aspiring Python <br><span class="text-gradient">Software Engineer</span>
+                    <br>& Hardware Innovator
+                </h1>
+                <p class="hero-description fade-in">
+                    Synthesizing logic and electronics to build tomorrow's solutions. I am a 12-year-old developer
+                    turning curiosity into code and bridging the gap between software and the physical world.
+                </p>
+                <div class="hero-buttons fade-in">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Let's Connect</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container about-container">
+                <div class="about-image-wrapper fade-in">
+                    <img src="images/profile.jpg" alt="Adam Ayman Profile" class="about-image">
+                </div>
+                <div class="about-content fade-in">
+                    <h2 class="section-title">About Me</h2>
+                    <h3 class="about-role">Building the Future, One Line of Code at a Time</h3>
+                    <p>
+                        I am currently an elementary school student with a voracious appetite for technology. My journey
+                        began recently, but my acceleration has been exponential. In just over a month, I have
+                        transitioned from absolute beginner to building functional applications and hardware prototypes.
+                    </p>
+                    <p>
+                        Unlike the average student, I spend my time deconstructing problems and engineering solutions.
+                        Whether it's optimizing a Python script or soldering an Arduino circuit, I am driven by the
+                        thrill of making things work. I am not just learning to code; I am learning to think like an
+                        engineer.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Python</span>
+                            <span class="stat-label">Main Focus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title text-center fade-in">Technical Arsenal</h2>
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-card fade-in">
+                        <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+                        <h3>Languages</h3>
+                        <ul class="skill-list">
+                            <li>Python (Core & Logic)</li>
+                            <li>HTML5 & CSS3</li>
+                            <li>Vanilla JavaScript</li>
+                        </ul>
+                    </div>
+                    <!-- Hardware -->
+                    <div class="skill-card fade-in">
+                        <div class="skill-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>Hardware & IoT</h3>
+                        <ul class="skill-list">
+                            <li>Arduino Uno</li>
+                            <li>Circuit Design</li>
+                            <li>Sensor Integration</li>
+                            <li>Embedded Systems Logic</li>
+                        </ul>
+                    </div>
+                    <!-- Tools -->
+                    <div class="skill-card fade-in">
+                        <div class="skill-icon"><i class="fa-solid fa-code-branch"></i></div>
+                        <h3>Tools & Workflow</h3>
+                        <ul class="skill-list">
+                            <li>VS Code</li>
+                            <li>Git & GitHub</li>
+                            <li>Command Line</li>
+                            <li>Problem Solving</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title text-center fade-in">Featured Projects</h2>
+                <p class="section-subtitle text-center fade-in">A selection of my recent technical endeavors.</p>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card fade-in">
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-calculator"></i></div>
+                            <h3 class="project-title">Algorithmic Calculator</h3>
+                            <p class="project-desc">A robust mathematical engine built with Python. This project focuses
+                                on input validation, edge-case handling, and clean logical flow, demonstrating a strong
+                                grasp of control structures.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Logic</span>
+                                <span>CLI</span>
+                            </div>
+                            <a href="projects/algorithmic_calculator.html" class="project-link">View Code <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card fade-in">
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-calculator"></i></div>
+                            <h3 class="project-title">Real Calculator</h3>
+                            <p class="project-desc">A comprehensive Python calculator dealing with multiple operations
+                                and error checking. Implements addition, subtraction, multiplication, division, and
+                                modulus with division-by-zero protection.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Control Flow</span>
+                                <span>Interactive</span>
+                            </div>
+                            <a href="projects/real_calculator.html" class="project-link">View Code <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card fade-in">
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-gamepad"></i></div>
+                            <h3 class="project-title">Guessing Game</h3>
+                            <p class="project-desc">An interactive number guessing game that utilizes random number
+                                generation and loops to challenge the user to find a secret number.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Broad Logic</span>
+                                <span>Game Dev</span>
+                            </div>
+                            <a href="projects/guessing_game.html" class="project-link">View Code <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project-card fade-in">
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fa-solid fa-desktop"></i></div>
+                            <h3 class="project-title">GUI Calculator</h3>
+                            <p class="project-desc">A desktop application calculator built with Python's Tkinter
+                                library. Features a graphical user interface with clickable buttons, arithmetic
+                                operations, and error handling.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Tkinter</span>
+                                <span>GUI</span>
+                            </div>
+                            <a href="projects/calculator_gui.html" class="project-link">View Code <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title text-center fade-in">My Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2025 - Present</div>
+                        <div class="timeline-content">
+                            <h3>Independent Software Engineering Journey</h3>
+                            <span class="timeline-role">Self-Taught Developer</span>
+                            <p>Embarked on an intensive self-directed curriculum focusing on computer science
+                                fundamentals.</p>
+                            <ul>
+                                <li>Mastered Python syntax and core concepts within weeks.</li>
+                                <li>Engineered multiple utility applications to reinforce learning.</li>
+                                <li>Bridged software knowledge with electronics through Arduino experimentation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title text-center fade-in">What I Offer</h2>
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <i class="fa-brands fa-python service-icon"></i>
+                        <h3>Custom Python Scripting</h3>
+                        <p>Developing efficient scripts to automate tasks and solve logical problems.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <i class="fa-solid fa-microchip service-icon"></i>
+                        <h3>Hardware Prototyping</h3>
+                        <p>Designing basic electronic circuits and bringing them to life with Arduino.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <i class="fa-solid fa-book-open service-icon"></i>
+                        <h3>Technical Documentation</h3>
+                        <p>Creating clear, concise documentation for codebases and projects to ensure maintainability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Objective -->
+        <section id="objective" class="section bg-gradient text-center">
+            <div class="container narrow-container fade-in">
+                <h2 class="section-title light-text">Career Objective</h2>
+                <p class="objective-text">
+                    "My mission is to evolve into a world-class Software Engineer. I am committed to a lifetime of
+                    learning, building impactful technologies, and pushing the boundaries of what is possible with
+                    code."
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container contact-container">
+                <div class="contact-info fade-in">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p>I am always open to discussing technology, new projects, or learning opportunities.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:adam@example.com" class="contact-method">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>adam@example.com</span>
+                        </a>
+                        <div class="social-links">
+                            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form fade-in">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="How can I help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">Adam<span class="accent">.</span></div>
+            <p>&copy; 2026 Adam Ayman. Built with <i class="fa-solid fa-heart accent"></i> and Code.</p>
+            <a href="#hero" class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

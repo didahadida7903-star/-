@@ -1,0 +1,10 @@
+print("welcome to our calcolatior")
+
+num1=float(input("enter first number:"))
+num2=float(input("enter seconed number:"))
+print("..............................................")
+print("the plus:",num1,"+",num2,"=",num1+num2)
+print("the mins:",num1,"-",num2,"=",num1-num2)
+print("the multiply:",num1,"*",num2,"=",num1*num2)
+print("the devided:",num1, "/" ,num2,"=",num1/num2)
+e=input("press enter to exit")

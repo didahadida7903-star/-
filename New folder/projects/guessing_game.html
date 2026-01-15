@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game | Project Details</title>
+    <meta name="description" content="Source code and details for the Guessing Game project by Adam Ayman.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .code-container {
+            background-color: #1e1e1e;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow-x: auto;
+            margin: 2rem 0;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+
+        .code-block {
+            color: #d4d4d4;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .keyword {
+            color: #569cd6;
+        }
+
+        /* def, return, if, else, print, while, break, import, elif */
+        .string {
+            color: #ce9178;
+        }
+
+        /* "strings" */
+        .function {
+            color: #dcdcaa;
+        }
+
+        /* input, float, int, randint */
+        .number {
+            color: #b5cea8;
+        }
+
+        /* numbers */
+        .comment {
+            color: #6a9955;
+        }
+
+        /* comments */
+        .operator {
+            color: #d4d4d4;
+        }
+
+        .module {
+            color: #4ec9b0;
+        }
+
+        /* random */
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Adam<span class="accent">.</span></a>
+
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../index.html#projects" class="nav-link">Back to Projects</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <a href="../index.html#projects" class="btn btn-outline" style="margin-bottom: 2rem;"><i
+                        class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+
+                <h1 class="hero-title">Guessing Game</h1>
+                <p class="hero-description">
+                    An interactive number guessing game that utilizes random number generation and loops to challenge
+                    the user to find a secret number.
+                </p>
+
+                <div class="project-tags" style="margin-bottom: 2rem;">
+                    <span>Python</span>
+                    <span>Broad Logic</span>
+                    <span>Game Dev</span>
+                </div>
+
+                <div class="project-display">
+                    <div class="code-container">
+                        <pre class="code-block">
+<span class="keyword">import</span> <span class="module">random</span>
+
+<span class="function">print</span>(<span class="string">"welcome to our gussing game"</span>)
+
+secret_number = <span class="module">random</span>.<span class="function">randint</span>(<span class="number">1</span>,<span class="number">10</span>)
+attempt = <span class="number">0</span> 
+
+<span class="keyword">while</span> <span class="keyword">True</span>:
+    guss = <span class="function">int</span>(<span class="function">input</span>(<span class="string">"guss number between 1,10:"</span>))
+    attempt += <span class="number">1</span> 
+    <span class="keyword">if</span> guss == secret_number:
+        <span class="function">print</span>(f<span class="string">"correct you gussed the number in {attempt} tries"</span>)
+        e = <span class="function">input</span>(<span class="string">"press enter to exit"</span>)
+        <span class="keyword">break</span>
+    <span class="keyword">elif</span> guss > secret_number:
+        <span class="function">print</span>(<span class="string">" too high try again"</span>)
+    <span class="keyword">else</span>:
+        <span class="function">print</span>(<span class="string">"too low try again"</span>)
+                        </pre>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="../images/guessing_game_demo.jpg" alt="Guessing Game Execution Demo" loading="lazy">
+                        <p class="image-caption">Console output showing game interaction</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="../python_projects/guessing_game.py" download class="btn btn-primary"><i
+                            class="fa-solid fa-download"></i> Download Source Code</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">Adam<span class="accent">.</span></div>
+            <p>&copy; 2026 Adam Ayman. Built with <i class="fa-solid fa-heart accent"></i> and Code.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

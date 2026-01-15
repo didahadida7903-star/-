@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUI Calculator | Project Details</title>
+    <meta name="description" content="Source code and details for the GUI Calculator project by Adam Ayman.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .code-container {
+            background-color: #1e1e1e;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow-x: auto;
+            margin: 2rem 0;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+
+        .code-block {
+            color: #d4d4d4;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .keyword {
+            color: #569cd6;
+        }
+
+        /* def, return, if, else, print, from, import, try, except, for, in, lambda */
+        .string {
+            color: #ce9178;
+        }
+
+        /* "strings" */
+        .function {
+            color: #dcdcaa;
+        }
+
+        /* input, float, int, eval, Tk, StringVar, Entry, Button, Frame */
+        .number {
+            color: #b5cea8;
+        }
+
+        /* numbers */
+        .comment {
+            color: #6a9955;
+        }
+
+        /* comments */
+        .operator {
+            color: #d4d4d4;
+        }
+
+        .variable {
+            color: #9cdcfe;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Adam<span class="accent">.</span></a>
+
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../index.html#projects" class="nav-link">Back to Projects</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <a href="../index.html#projects" class="btn btn-outline" style="margin-bottom: 2rem;"><i
+                        class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+
+                <h1 class="hero-title">GUI Calculator</h1>
+                <p class="hero-description">
+                    A desktop application calculator built with Python's Tkinter library. Features a graphical user
+                    interface with clickable buttons, arithmetic operations, and error handling.
+                </p>
+
+                <div class="project-tags" style="margin-bottom: 2rem;">
+                    <span>Python</span>
+                    <span>Tkinter</span>
+                    <span>GUI</span>
+                </div>
+
+                <div class="project-display">
+                    <div class="code-container">
+                        <pre class="code-block">
+<span class="keyword">from</span> tkinter <span class="keyword">import</span> *
+
+<span class="keyword">def</span> <span class="function">press</span>(key):
+    current = entry_text.get()
+    entry_text.set(current + <span class="function">str</span>(key))
+
+<span class="comment"># Function for equality</span>
+<span class="keyword">def</span> <span class="function">calculate</span>():
+    <span class="keyword">try</span>:
+        result = <span class="function">eval</span>(entry_text.get())
+        entry_text.set(result)
+    <span class="keyword">except</span> <span class="function">ZeroDivisionError</span>:
+        entry_text.set(<span class="string">"Cannot divide by zero"</span>)
+    <span class="keyword">except</span>:
+        entry_text.set(<span class="string">"Error"</span>)
+
+<span class="comment"># Function to clear screen</span>
+<span class="keyword">def</span> <span class="function">clear</span>():
+    entry_text.set(<span class="string">""</span>)
+
+root = <span class="function">Tk</span>()
+root.title(<span class="string">"Simple Calculator"</span>)
+root.geometry(<span class="string">"300x400"</span>)
+
+entry_text = <span class="function">StringVar</span>()
+entry = <span class="function">Entry</span>(root, textvariable=entry_text, font=(<span class="string">'Arial'</span>,<span class="number">18</span>), bd=<span class="number">10</span>, insertwidth=<span class="number">2</span>, width=<span class="number">18</span>, borderwidth=<span class="number">4</span>)
+entry.pack(pady=<span class="number">10</span>)
+
+<span class="comment"># Buttons for numbers and operations</span>
+buttons = [
+    <span class="string">'7'</span>,<span class="string">'8'</span>,<span class="string">'9'</span>,<span class="string">'/'</span>,
+    <span class="string">'4'</span>,<span class="string">'5'</span>,<span class="string">'6'</span>,<span class="string">'*'</span>,
+    <span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'3'</span>,<span class="string">'-'</span>,
+    <span class="string">'0'</span>,<span class="string">'.'</span>,<span class="string">'%'</span>,<span class="string">'+'</span>
+]
+
+<span class="comment"># Create buttons</span>
+frame = <span class="function">Frame</span>(root)
+frame.pack()
+
+row = <span class="number">0</span>
+col = <span class="number">0</span>
+<span class="keyword">for</span> button <span class="keyword">in</span> buttons:
+    b = <span class="function">Button</span>(frame, text=button, width=<span class="number">5</span>, height=<span class="number">2</span>, font=(<span class="string">'Arial'</span>,<span class="number">18</span>),
+               command=<span class="keyword">lambda</span> x=button: <span class="function">press</span>(x))
+    b.grid(row=row, column=col, padx=<span class="number">5</span>, pady=<span class="number">5</span>)
+    col += <span class="number">1</span>
+    <span class="keyword">if</span> col > <span class="number">3</span>:
+        col = <span class="number">0</span>
+        row += <span class="number">1</span>
+
+<span class="comment"># Equals button</span>
+<span class="function">Button</span>(root, text=<span class="string">'='</span>, width=<span class="number">22</span>, height=<span class="number">2</span>, font=(<span class="string">'Arial'</span>,<span class="number">18</span>), command=calculate, bg=<span class="string">'lightblue'</span>).pack(pady=<span class="number">5</span>)
+
+<span class="comment"># Clear button</span>
+<span class="function">Button</span>(root, text=<span class="string">'C'</span>, width=<span class="number">22</span>, height=<span class="number">2</span>, font=(<span class="string">'Arial'</span>,<span class="number">18</span>), command=clear, bg=<span class="string">'pink'</span>).pack(pady=<span class="number">5</span>)
+
+root.mainloop()
+                        </pre>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="../images/calculator_gui_demo.jpg" alt="GUI Calculator Interface" loading="lazy">
+                        <p class="image-caption">Tkinter Calculator Interface with Buttons</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="../python_projects/calculator_gui.py" download class="btn btn-primary"><i
+                            class="fa-solid fa-download"></i> Download Source Code</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">Adam<span class="accent">.</span></div>
+            <p>&copy; 2026 Adam Ayman. Built with <i class="fa-solid fa-heart accent"></i> and Code.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

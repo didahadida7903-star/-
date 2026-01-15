@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithmic Calculator | Project Details</title>
+    <meta name="description" content="Source code and details for the Algorithmic Calculator project by Adam Ayman.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .code-container {
+            background-color: #1e1e1e;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow-x: auto;
+            margin: 2rem 0;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+
+        .code-block {
+            color: #d4d4d4;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .keyword {
+            color: #569cd6;
+        }
+
+        /* def, return, if, else, print */
+        .string {
+            color: #ce9178;
+        }
+
+        /* "strings" */
+        .function {
+            color: #dcdcaa;
+        }
+
+        /* input, float */
+        .number {
+            color: #b5cea8;
+        }
+
+        /* numbers */
+        .comment {
+            color: #6a9955;
+        }
+
+        /* comments */
+        .operator {
+            color: #d4d4d4;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Adam<span class="accent">.</span></a>
+
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../index.html#projects" class="nav-link">Back to Projects</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <a href="../index.html#projects" class="btn btn-outline" style="margin-bottom: 2rem;"><i
+                        class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+
+                <h1 class="hero-title">Algorithmic Calculator</h1>
+                <p class="hero-description">
+                    A robust mathematical engine built with Python. This project focuses on input validation, edge-case
+                    handling, and clean logical flow, demonstrating a strong grasp of control structures.
+                </p>
+
+                <div class="project-tags" style="margin-bottom: 2rem;">
+                    <span>Python</span>
+                    <span>Logic</span>
+                    <span>CLI</span>
+                </div>
+
+                <div class="project-display">
+                    <div class="code-container">
+                        <pre class="code-block">
+<span class="function">print</span>(<span class="string">"welcome to our calcolatior"</span>)
+
+num1 = <span class="function">float</span>(<span class="function">input</span>(<span class="string">"enter first number:"</span>))
+num2 = <span class="function">float</span>(<span class="function">input</span>(<span class="string">"enter seconed number:"</span>))
+
+<span class="function">print</span>(<span class="string">".............................................."</span>)
+<span class="function">print</span>(<span class="string">"the plus:"</span>, num1, <span class="string">"+"</span>, num2, <span class="string">"="</span>, num1 + num2)
+<span class="function">print</span>(<span class="string">"the mins:"</span>, num1, <span class="string">"-"</span>, num2, <span class="string">"="</span>, num1 - num2)
+<span class="function">print</span>(<span class="string">"the multiply:"</span>, num1, <span class="string">"*"</span>, num2, <span class="string">"="</span>, num1 * num2)
+<span class="function">print</span>(<span class="string">"the devided:"</span>, num1, <span class="string">"/"</span>, num2, <span class="string">"="</span>, num1 / num2)
+
+e = <span class="function">input</span>(<span class="string">"press enter to exit"</span>)
+                        </pre>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="../images/algorithmic_calculator_demo.jpg" alt="Algorithmic Calculator Execution Demo"
+                            loading="lazy">
+                        <p class="image-caption">Console output showing basic arithmetic operations</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="../python_projects/algorithmic_calculator.py" download class="btn btn-primary"><i
+                            class="fa-solid fa-download"></i> Download Source Code</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">Adam<span class="accent">.</span></div>
+            <p>&copy; 2026 Adam Ayman. Built with <i class="fa-solid fa-heart accent"></i> and Code.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
